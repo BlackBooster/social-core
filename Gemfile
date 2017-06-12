@@ -12,6 +12,7 @@ gem 'coffee-rails', '~> 4.2'
 gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
 gem 'figaro'
+gem 'twitter-bootstrap-rails'
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   gem 'capybara', '~> 2.13'
@@ -31,6 +32,7 @@ gem 'omniauth'
 gem 'omniauth-facebook'
 gem 'omniauth-twitter'
 gem 'omniauth-tumblr'
+gem 'twitter'
 gem 'pg'
 group :development do
   gem 'better_errors'

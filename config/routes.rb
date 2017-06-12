@@ -13,4 +13,7 @@ Rails.application.routes.draw do
   get '/signin_tumblr' => 'sessions#new_tumblr', :as => :signin_tumblr
   # sessions failure
   get '/auth/failure' => 'sessions#failure'
+
+  post 'twitter/update_user_account'
+  resources :twitter
 end
