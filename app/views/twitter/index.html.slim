@@ -1,0 +1,49 @@
+h1
+  | Twitter Path
+= button_to 'Update account', twitter_update_user_account_path, method: :post
+.row
+  .span4
+    .thumbnail
+      |  <img src="
+      = current_user.image
+      | " style="float: left;margin: 5px;"> 
+      h3
+        = current_user.name
+      h4
+        = current_user.location
+      br
+      p
+        = current_user.description
+.row[style="margin-top: 16px;"]
+  .span5
+    h1
+      | User Timeline
+    table.table.table-striped
+      tr
+        th
+          | Text
+      - twitter_user.each do |t|
+        tr
+          th
+            = t.text
+  .span5
+    h1
+      | Home Timeline
+    table.table.table-striped
+      tr
+        th
+          | User Name
+        th
+          | Profile Image
+        th
+          | Text
+      - twitter_home.each do |t|
+        tr
+          th
+            = t.user.name
+          th
+            | <img src="
+            = t.user.profile_image_url
+            | " />
+          th
+            = t.text
